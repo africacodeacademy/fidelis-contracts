@@ -3,6 +3,7 @@
 # Global schema
 
 globalInts = 7
+
 globalBytes = 12
 
 Local schema

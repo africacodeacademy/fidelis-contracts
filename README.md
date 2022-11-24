@@ -23,7 +23,7 @@ check_default
 
 Deployment function
 
-# handle_creation requence
+# handle_creation sequence
 
 Assertions made
 

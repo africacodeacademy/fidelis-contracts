@@ -1,6 +1,6 @@
 # fidelis-contracts
 
-Global schema
+# Global schema
 
 globalInts = 7
 globalBytes = 12
@@ -11,7 +11,7 @@ localInts = 2
 localBytes = 1
       
       
-No_op txn functions
+# No_op txn functions
 
 payment
 reclaim
@@ -22,7 +22,7 @@ check_default
 
 Deployment function
 
-handle_creation requence
+# handle_creation requence
 
 Assertions made
 
@@ -32,7 +32,7 @@ Assertions made
 - check if loan end time is a future data
 - check if loan end time is ahead of loan start time
 
-Initialized data
+# Initialized data
 
 - calculated loan balance (loan amount + loan fee)
 - original loan amount
@@ -47,17 +47,17 @@ Initialized data
 - staked amount (amount staked by beneficiary and backers)
 - manager address
 
-escrow_config sequence
+# escrow_config sequence
 
 Sequence of optin  transactions for the contract escrow address. Enables the escrow address to work with USDC,  Fidelis trust and backer tokens
 Only one assertion is made, the txn can only be made by the manager address
 
 
-Invest sequence
+# Invest sequence
 
-# allow investors to (Bid) fund escrow account with backer and trust tokens
-# after successfull bid the investor account local state is updated with a record of the investment (investment amount, invested assetId and key)
-# If the minimum required investement stake for the contract is met, a payout is made to the agent address and the contract state is changed from openToInvestment to alive.
+allow investors to (Bid) fund escrow account with backer and trust tokens
+after successfull bid the investor account local state is updated with a record of the investment (investment amount, invested assetId and key)
+If the minimum required investement stake for the contract is met, a payout is made to the agent address and the contract state is changed from openToInvestment to alive.
 
 Assetions made
 
@@ -68,7 +68,7 @@ Assetions made
 -  txn amount (investment amount) is a non zero number
 -  txn amount (investment amount) does not go above the agreed loan amount
 
-repay sequence
+# repay sequence
 
 allow account to transfer USDCa tokens to liquidity pool as loan payment
 if a partial payment is made, the payment is accepted and held in the contract untill full payment is made
@@ -84,10 +84,10 @@ Assertions made
 - token sent is the expected (currency) stable token (USDC)
 
 
-Reclaim sequence
+# Reclaim sequence
 
-# allow backers to relcaim staked points, update account local state with investment amount
-# account local state (amount) is reduced to 0 after payment
+allow backers to relcaim staked points, update account local state with investment amount
+account local state (amount) is reduced to 0 after payment
 Assertions made
 
 -  loan state == matured
